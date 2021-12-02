@@ -82,11 +82,65 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+const vogais = {
+  decode: ['a', 'e', 'i', 'o', 'u'],
+  encode: [1, 2, 3, 4, 5],
+};
+
+function encode(string) {
+  let fraseCodificada = [];
+
+  for (let index = 0; index < string.length; index++) {
+    switch (true) {
+      case string[index] === 'a':
+        fraseCodificada.push(1);
+        break;
+      case string[index] === 'e':
+        fraseCodificada.push(2);
+        break;
+      case string[index] === 'i':
+        fraseCodificada.push(3);
+        break;
+      case string[index] === 'o':
+        fraseCodificada.push(4);
+        break;
+      case string[index] === 'u':
+        fraseCodificada.push(5);
+        break;
+      default:
+        fraseCodificada.push(string[index]);
+        break;
+    }
+  }
+  return fraseCodificada.join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(string2) {
+  let fraseDecodificada = [];
+
+  for (let index2 = 0; index2 < string2.length; index2++) {
+    switch (true) {
+      case string2[index2] === '1':
+        fraseDecodificada.push('a');
+        break;
+      case string2[index2] === '2':
+        fraseDecodificada.push('e');
+        break;
+      case string2[index2] === '3':
+        fraseDecodificada.push('i');
+        break;
+      case string2[index2] === '4':
+        fraseDecodificada.push('o');
+        break;
+      case string2[index2] === '5':
+        fraseDecodificada.push('u');
+        break;
+      default:
+        fraseDecodificada.push(string2[index2]);
+        break;
+    }
+  }
+  return fraseDecodificada.join('');
 }
 
 module.exports = {
