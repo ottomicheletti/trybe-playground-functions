@@ -16,5 +16,27 @@
   },
   "dependencies": {
     "eslint-config-trybe-fundamentals": "1.1.0"
-  }
+  },
+  "name": "sd-019-c-project-playground-functions",
+  "description": "Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do Manual da Pessoa Estudante da Trybe.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tryber/sd-019-c-project-playground-functions.git"
+  },
+  "keywords": [
+    "projeto",
+    "playground-functions",
+    "javascript"
+  ],
+  "author": "Otto Micheletti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tryber/sd-019-c-project-playground-functions/issues"
+  },
+  "homepage": "https://github.com/tryber/sd-019-c-project-playground-functions#readme"
 }
