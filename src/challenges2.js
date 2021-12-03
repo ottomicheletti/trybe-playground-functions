@@ -13,8 +13,59 @@ function techList(stacks, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let resultado;
+  let numeros = array;
+  if (array.length !== 11) {
+    resultado = 'Array com tamanho incorreto.';
+  } else if (Math.max(...numeros) > 9 || Math.min(...numeros) < 0) {
+    resultado = 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    let contador = 0;
+    let vezesAlgumNumeroRepete = 0;
+
+    for (
+      let numeroDaArray = 0;
+      numeroDaArray < numeros.length;
+      numeroDaArray++
+    ) {
+      let numeroQueVerifica = numeros[numeroDaArray];
+      for (let index = 0; index < numeros.length; index++) {
+        if (numeroQueVerifica === numeros[index]) {
+          contador += 1;
+        }
+      }
+      if (contador > vezesAlgumNumeroRepete) {
+        vezesAlgumNumeroRepete = contador;
+      }
+      contador = 0;
+    }
+    if (vezesAlgumNumeroRepete >= 3) {
+      resultado =
+        'não é possível gerar um número de telefone com esses valores';
+    } else {
+      let telefone = numeros.join('');
+
+      resultado =
+        '(' +
+        telefone[0] +
+        telefone[1] +
+        ')' +
+        ' ' +
+        telefone[2] +
+        telefone[3] +
+        telefone[4] +
+        telefone[5] +
+        telefone[6] +
+        '-' +
+        telefone[7] +
+        telefone[8] +
+        telefone[9] +
+        telefone[10];
+    }
+  }
+
+  return resultado;
 }
 
 // Desafio 12
