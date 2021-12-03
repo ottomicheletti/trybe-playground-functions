@@ -78,8 +78,24 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numerosArray = string.match(/\d+/g).map(Number);
+  let coposDeAgua = 0;
+  let pluralOuNao = [];
+
+  for (let index = 0; index < numerosArray.length; index++) {
+    if (typeof numerosArray[index] == 'number') {
+      coposDeAgua += numerosArray[index];
+    }
+  }
+
+  if (coposDeAgua > 1) {
+    pluralOuNao = ' copos de água';
+  } else {
+    pluralOuNao = ' copo de água';
+  }
+  let resposta = [coposDeAgua, pluralOuNao];
+  return resposta.join('');
 }
 
 module.exports = {
