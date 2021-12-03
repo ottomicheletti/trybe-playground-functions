@@ -48,20 +48,12 @@ function generatePhoneNumber(array) {
 
       resultado =
         '(' +
-        telefone[0] +
-        telefone[1] +
+        telefone.slice(0, 2) +
         ')' +
         ' ' +
-        telefone[2] +
-        telefone[3] +
-        telefone[4] +
-        telefone[5] +
-        telefone[6] +
+        telefone.slice(2, 7) +
         '-' +
-        telefone[7] +
-        telefone[8] +
-        telefone[9] +
-        telefone[10];
+        telefone.slice(7, 11);
     }
   }
 
